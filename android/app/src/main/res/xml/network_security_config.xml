@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+    <!--<domain-config cleartextTrafficPermitted="true">
+        &lt;!&ndash; 这里配置上域名白名单 &ndash;&gt;
+        <domain includeSubdomains="true">139.129.209.67</domain>
+    </domain-config>-->
+</network-security-config>

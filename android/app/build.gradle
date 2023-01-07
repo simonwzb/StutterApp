@@ -1,0 +1,86 @@
+import java.text.SimpleDateFormat
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+/*if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}*/
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+def buildTime() {
+    def df = new SimpleDateFormat("yyMMddHHmmss")
+    df.setTimeZone(TimeZone.getTimeZone("UTC+08:00"))
+    return df.format(new Date())
+}
+
+def apkSuffix() {
+    def df = new SimpleDateFormat("yyMMdd")
+    df.setTimeZone(TimeZone.getTimeZone("UTC+08:00"))
+    return df.format(new Date())
+}
+
+android {
+    compileSdkVersion 31
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.xixue.stutter_app"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "口吃研究社.v" + defaultConfig.versionName + ".build." + defaultConfig.versionCode + ".apk";
+        }
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+dependencies{
+	//implementation project(':xupdate-lib')
+    implementation 'com.android.support:appcompat-v7:26.0.0'
+    //implementation 'com.github.xuexiangjys:XUpdate:2.1.1'
+    implementation 'androidx.appcompat:appcompat:1.6.0-alpha01'
+    /*implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.12'*/
+}
+
+flutter {
+    source '../..'
+}
+
