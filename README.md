@@ -1,2 +1,6 @@
 # StutterApp
-口吃研究社app flutter端代码，2022年初写的比较匆忙代码不算考究；感谢这个app，伴我度过疫情风控在家的日子。
+口吃研究社app flutter端代码，2022年初写的比较匆忙代码不算考究。
+感谢这个app，伴我度过疫情风控在家的日子。
+最后卡在上线前夕，由于商业上太难，只留作flutter技术的交流之用。
+
+| <img src='http://media.getlijin.com/stutter/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202022-03-30%20at%2017.01.16.png' width='20%'> | <img src='http://media.getlijin.com/stutter/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202022-03-30%20at%2017.49.26.png' width='20%'> | <img src='http://media.getlijin.com/stutter/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202022-03-30%20at%2017.49.31.png' width='20%'> | <img src='http://media.getlijin.com/stutter/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202022-03-30%20at%2017.49.34.png' width='20%'> | <img src='http://media.getlijin.com/stutter/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202022-03-30%20at%2017.50.44.png' width='20%'> | <img src='http://media.getlijin.com/stutter/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202022-03-30%20at%2017.50.36.png' width='20%'> | <img src='http://media.getlijin.com/stutter/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202022-03-30%20at%2017.50.11.png' width='20%'> | <img src='http://media.getlijin.com/stutter/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202022-03-30%20at%2017.49.52.png' width='20%'> | <img src='http://media.getlijin.com/stutter/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202022-03-30%20at%2017.49.38.png' width='20%'> |
